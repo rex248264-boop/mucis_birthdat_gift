@@ -4,76 +4,76 @@
     "title": "First Wish",
     "artist": "一凯",
     "audio": "assets/music/first-wish.mp3",
-    "cover": "assets/covers/first-wish.png"
+    "cover": "assets/covers/first-wish.jpg"
   },
   {
     "id": "closest-to-each-other",
     "title": "没有人能够比我们更接近对方",
     "artist": "一凯",
     "audio": "assets/music/closest-to-each-other.mp3",
-    "cover": "assets/covers/closest-to-each-other.png"
+    "cover": "assets/covers/closest-to-each-other.jpg"
   },
   {
     "id": "moon-car",
     "title": "Moon Car",
     "artist": "一凯",
     "audio": "assets/music/moon-car.mp3",
-    "cover": "assets/covers/moon-car.png"
+    "cover": "assets/covers/moon-car.jpg"
   },
   {
     "id": "night-run",
     "title": "Night Run",
     "artist": "一凯",
     "audio": "assets/music/night-run.mp3",
-    "cover": "assets/covers/night-run.png"
+    "cover": "assets/covers/night-run.jpg"
   },
   {
     "id": "neon-rain",
     "title": "Neon Rain",
     "artist": "一凯",
     "audio": "assets/music/neon-rain.mp3",
-    "cover": "assets/covers/neon-rain.png"
+    "cover": "assets/covers/neon-rain.jpg"
   },
   {
     "id": "moonlit-old-dream",
     "title": "Moonlit Old Dream",
     "artist": "一凯",
     "audio": "assets/music/moonlit-old-dream.mp3",
-    "cover": "assets/covers/moonlit-old-dream.png"
+    "cover": "assets/covers/moonlit-old-dream.jpg"
   },
   {
     "id": "intimacy",
     "title": "Intimacy",
     "artist": "一凯",
     "audio": "assets/music/intimacy.mp3",
-    "cover": "assets/covers/intimacy.png"
+    "cover": "assets/covers/intimacy.jpg"
   },
   {
     "id": "breath",
     "title": "Breath",
     "artist": "一凯",
     "audio": "assets/music/breath.mp3",
-    "cover": "assets/covers/breath.png"
+    "cover": "assets/covers/breath.jpg"
   },
   {
     "id": "answer",
     "title": "Answer",
     "artist": "一凯",
     "audio": "assets/music/answer.mp3",
-    "cover": "assets/covers/answer.png"
+    "cover": "assets/covers/answer.jpg"
   },
   {
     "id": "wedding",
     "title": "Wedding",
     "artist": "一凯",
     "audio": "assets/music/wedding.mp3",
-    "cover": "assets/covers/wedding.png"
+    "cover": "assets/covers/wedding.jpg"
   },
   {
     "id": "xiang-jian-ni",
     "title": "想见你",
     "artist": "八三夭",
     "audio": "assets/music/xiang-jian-ni.mp3",
-    "cover": "assets/covers/xiang-jian-ni.png"
+    "cover": "assets/covers/xiang-jian-ni.jpg"
   }
 ]
