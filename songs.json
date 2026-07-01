@@ -1,17 +1,10 @@
 [
   {
-    "id": "breath",
-    "title": "Breath",
+    "id": "first-wish",
+    "title": "First Wish",
     "artist": "一凯",
-    "audio": "assets/music/breath.mp3",
-    "cover": "assets/covers/breath.png"
-  },
-  {
-    "id": "xiang-jian-ni",
-    "title": "想见你",
-    "artist": "一凯",
-    "audio": "assets/music/xiang-jian-ni.mp3",
-    "cover": "assets/covers/xiang-jian-ni.png"
+    "audio": "assets/music/first-wish.mp3",
+    "cover": "assets/covers/first-wish.png"
   },
   {
     "id": "closest-to-each-other",
@@ -19,6 +12,13 @@
     "artist": "一凯",
     "audio": "assets/music/closest-to-each-other.mp3",
     "cover": "assets/covers/closest-to-each-other.png"
+  },
+  {
+    "id": "moon-car",
+    "title": "Moon Car",
+    "artist": "一凯",
+    "audio": "assets/music/moon-car.mp3",
+    "cover": "assets/covers/moon-car.png"
   },
   {
     "id": "night-run",
@@ -49,11 +49,11 @@
     "cover": "assets/covers/intimacy.png"
   },
   {
-    "id": "moon-car",
-    "title": "Moon Car",
+    "id": "breath",
+    "title": "Breath",
     "artist": "一凯",
-    "audio": "assets/music/moon-car.mp3",
-    "cover": "assets/covers/moon-car.png"
+    "audio": "assets/music/breath.mp3",
+    "cover": "assets/covers/breath.png"
   },
   {
     "id": "answer",
@@ -70,10 +70,10 @@
     "cover": "assets/covers/wedding.png"
   },
   {
-    "id": "first-wish",
-    "title": "First Wish",
+    "id": "xiang-jian-ni",
+    "title": "想见你",
     "artist": "一凯",
-    "audio": "assets/music/first-wish.mp3",
-    "cover": "assets/covers/first-wish.png"
+    "audio": "assets/music/xiang-jian-ni.mp3",
+    "cover": "assets/covers/xiang-jian-ni.png"
   }
 ]
