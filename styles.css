@@ -25,7 +25,7 @@ body {
 }
 
 button,
-audio {
+input {
   font: inherit;
 }
 
@@ -89,7 +89,7 @@ p {
 }
 
 h1 {
-  font-size: clamp(1.8rem, 4vw, 2.65rem);
+  font-size: clamp(1.7rem, 3.4vw, 2.35rem);
   line-height: 1.08;
 }
 
@@ -99,15 +99,78 @@ h1 {
 }
 
 audio {
-  width: 100%;
-  display: block;
+  display: none;
 }
 
-.controls-row {
+.custom-player {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 18px;
+  grid-template-columns: 48px auto minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  min-height: 70px;
+  padding: 12px 16px;
+  border: 1px solid rgba(187, 75, 84, 0.16);
+  border-radius: 999px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 244, 232, 0.9)),
+    rgba(255, 255, 255, 0.72);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 16px 34px rgba(82, 54, 37, 0.12);
+}
+
+.play-button {
+  width: 48px;
+  height: 48px;
+  min-height: 48px;
+  display: grid;
+  place-items: center;
+  border-color: rgba(187, 75, 84, 0.22);
+  background: var(--accent);
+  color: #fffaf2;
+  font-size: 1rem;
+  box-shadow: 0 12px 24px rgba(143, 40, 53, 0.22);
+}
+
+.time-display {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  color: var(--muted);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.progress-wrap {
+  display: block;
+  min-width: 0;
+}
+
+#progress {
+  width: 100%;
+  height: 8px;
+  display: block;
+  appearance: none;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--accent) var(--progress, 0%), rgba(118, 107, 96, 0.22) var(--progress, 0%));
+  outline: none;
+}
+
+#progress::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: 3px solid #fffaf2;
+  border-radius: 50%;
+  background: var(--accent-strong);
+  box-shadow: 0 4px 12px rgba(37, 32, 27, 0.22);
+}
+
+#progress::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border: 3px solid #fffaf2;
+  border-radius: 50%;
+  background: var(--accent-strong);
+  box-shadow: 0 4px 12px rgba(37, 32, 27, 0.22);
 }
 
 button {
@@ -127,8 +190,6 @@ button:hover {
 .playlist-panel {
   border-radius: 22px;
   padding: 22px;
-  max-height: min(720px, calc(100vh - 80px));
-  overflow: auto;
 }
 
 .playlist-heading {
@@ -234,22 +295,19 @@ button:hover {
   }
 
   h1 {
-    font-size: clamp(2.45rem, 13vw, 3.45rem);
+    font-size: clamp(2rem, 10vw, 2.85rem);
   }
 
-  audio {
-    margin-top: 0;
-  }
-
-  .controls-row {
-    margin-top: 16px;
+  .custom-player {
+    grid-template-columns: 46px auto minmax(92px, 1fr);
+    gap: 10px;
+    min-height: 64px;
+    padding: 10px 12px;
   }
 
   .playlist-panel {
-    max-height: 172px;
     border-radius: 18px;
     padding: 16px;
-    overflow: hidden;
   }
 
   .playlist-heading {

@@ -11,8 +11,11 @@ const title = document.querySelector("#title");
 const artist = document.querySelector("#artist");
 const playlist = document.querySelector("#playlist");
 const songCount = document.querySelector("#songCount");
-const prevBtn = document.querySelector("#prevBtn");
-const nextBtn = document.querySelector("#nextBtn");
+const playBtn = document.querySelector("#playBtn");
+const playIcon = document.querySelector("#playIcon");
+const currentTime = document.querySelector("#currentTime");
+const duration = document.querySelector("#duration");
+const progress = document.querySelector("#progress");
 
 function getSongIdFromAudioPath(audioPath, index) {
   const fileName = audioPath.split("/").pop() || `song-${index + 1}`;
@@ -46,6 +49,7 @@ function setActiveSong(index, shouldPlay = false, shouldUpdateUrl = true) {
   cover.src = song.cover;
   cover.alt = `${song.title} 封面`;
   audio.src = song.audio;
+  updateProgress();
 
   document.querySelectorAll(".song-card").forEach((button, buttonIndex) => {
     button.classList.toggle("is-active", buttonIndex === state.currentIndex);
@@ -59,6 +63,36 @@ function setActiveSong(index, shouldPlay = false, shouldUpdateUrl = true) {
 
   if (shouldPlay) {
     audio.play().catch(() => {});
+  }
+}
+
+function formatTime(seconds) {
+  if (!Number.isFinite(seconds)) return "0:00";
+
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = Math.floor(seconds % 60).toString().padStart(2, "0");
+  return `${minutes}:${remainingSeconds}`;
+}
+
+function updateProgress() {
+  const percent = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
+  progress.value = Math.round(percent * 10);
+  progress.style.setProperty("--progress", `${percent}%`);
+  currentTime.textContent = formatTime(audio.currentTime);
+  duration.textContent = formatTime(audio.duration);
+}
+
+function updatePlayState() {
+  const isPlaying = !audio.paused && !audio.ended;
+  playIcon.textContent = isPlaying ? "❚❚" : "▶";
+  playBtn.setAttribute("aria-label", isPlaying ? "暂停" : "播放");
+}
+
+function togglePlayback() {
+  if (audio.paused) {
+    audio.play().catch(() => {});
+  } else {
+    audio.pause();
   }
 }
 
@@ -127,8 +161,16 @@ async function loadSongs() {
   renderPlaylist();
 }
 
-prevBtn.addEventListener("click", () => setActiveSong(state.currentIndex - 1, true));
-nextBtn.addEventListener("click", () => setActiveSong(state.currentIndex + 1, true));
+playBtn.addEventListener("click", togglePlayback);
+progress.addEventListener("input", () => {
+  if (!audio.duration) return;
+  audio.currentTime = (Number(progress.value) / 1000) * audio.duration;
+  updateProgress();
+});
+audio.addEventListener("loadedmetadata", updateProgress);
+audio.addEventListener("timeupdate", updateProgress);
+audio.addEventListener("play", updatePlayState);
+audio.addEventListener("pause", updatePlayState);
 audio.addEventListener("ended", () => setActiveSong(state.currentIndex + 1, true));
 cover.addEventListener("error", () => {
   cover.src = DEFAULT_COVER;

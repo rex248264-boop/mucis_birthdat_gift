@@ -19,11 +19,20 @@
         <p id="artist">一凯</p>
       </div>
 
-      <audio id="audio" controls preload="metadata"></audio>
+      <audio id="audio" preload="metadata"></audio>
 
-      <div class="controls-row" aria-label="切换歌曲">
-        <button id="prevBtn" type="button">上一首</button>
-        <button id="nextBtn" type="button">下一首</button>
+      <div class="custom-player" aria-label="播放控制">
+        <button id="playBtn" class="play-button" type="button" aria-label="播放">
+          <span id="playIcon">▶</span>
+        </button>
+        <div class="time-display">
+          <span id="currentTime">0:00</span>
+          <span>/</span>
+          <span id="duration">0:00</span>
+        </div>
+        <label class="progress-wrap" aria-label="播放进度">
+          <input id="progress" type="range" min="0" max="1000" value="0">
+        </label>
       </div>
     </section>
 
