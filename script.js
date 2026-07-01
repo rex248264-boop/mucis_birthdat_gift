@@ -125,21 +125,12 @@ function renderPlaylist() {
     button.dataset.songId = song.id;
     button.addEventListener("click", () => setActiveSong(index, true));
 
-    const image = document.createElement("img");
-    image.src = song.cover;
-    image.alt = "";
-
-    const meta = document.createElement("span");
     const songTitle = document.createElement("span");
-    const songArtist = document.createElement("span");
 
     songTitle.className = "song-title";
-    songArtist.className = "song-artist";
     songTitle.textContent = song.title;
-    songArtist.textContent = song.artist;
 
-    meta.append(songTitle, songArtist);
-    button.append(image, meta);
+    button.append(songTitle);
     playlist.append(button);
   });
 

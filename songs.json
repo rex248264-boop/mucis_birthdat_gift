@@ -1,17 +1,24 @@
 [
   {
-    "id": "first-wish",
-    "title": "First Wish",
+    "id": "breath",
+    "title": "Breath",
     "artist": "一凯",
-    "audio": "assets/music/first-wish.mp3",
-    "cover": "assets/covers/first-wish.png"
+    "audio": "assets/music/breath.mp3",
+    "cover": "assets/covers/breath.png"
   },
   {
-    "id": "wedding",
-    "title": "Wedding",
+    "id": "xiang-jian-ni",
+    "title": "想见你",
     "artist": "一凯",
-    "audio": "assets/music/wedding.mp3",
-    "cover": "assets/covers/wedding.png"
+    "audio": "assets/music/xiang-jian-ni.mp3",
+    "cover": "assets/covers/xiang-jian-ni.png"
+  },
+  {
+    "id": "closest-to-each-other",
+    "title": "没有人能够比我们更接近对方",
+    "artist": "一凯",
+    "audio": "assets/music/closest-to-each-other.mp3",
+    "cover": "assets/covers/closest-to-each-other.png"
   },
   {
     "id": "night-run",
@@ -21,11 +28,11 @@
     "cover": "assets/covers/night-run.png"
   },
   {
-    "id": "answer",
-    "title": "Answer",
+    "id": "neon-rain",
+    "title": "Neon Rain",
     "artist": "一凯",
-    "audio": "assets/music/answer.mp3",
-    "cover": "assets/covers/answer.png"
+    "audio": "assets/music/neon-rain.mp3",
+    "cover": "assets/covers/neon-rain.png"
   },
   {
     "id": "moonlit-old-dream",
@@ -49,31 +56,24 @@
     "cover": "assets/covers/moon-car.png"
   },
   {
-    "id": "neon-rain",
-    "title": "Neon Rain",
+    "id": "answer",
+    "title": "Answer",
     "artist": "一凯",
-    "audio": "assets/music/neon-rain.mp3",
-    "cover": "assets/covers/neon-rain.png"
+    "audio": "assets/music/answer.mp3",
+    "cover": "assets/covers/answer.png"
   },
   {
-    "id": "breath",
-    "title": "Breath",
+    "id": "wedding",
+    "title": "Wedding",
     "artist": "一凯",
-    "audio": "assets/music/breath.mp3",
-    "cover": "assets/covers/breath.png"
+    "audio": "assets/music/wedding.mp3",
+    "cover": "assets/covers/wedding.png"
   },
   {
-    "id": "xiang-jian-ni",
-    "title": "想见你",
+    "id": "first-wish",
+    "title": "First Wish",
     "artist": "一凯",
-    "audio": "assets/music/xiang-jian-ni.mp3",
-    "cover": "assets/covers/xiang-jian-ni.png"
-  },
-  {
-    "id": "closest-to-each-other",
-    "title": "没有人能够比我们更接近对方",
-    "artist": "一凯",
-    "audio": "assets/music/closest-to-each-other.mp3",
-    "cover": "assets/covers/closest-to-each-other.png"
+    "audio": "assets/music/first-wish.mp3",
+    "cover": "assets/covers/first-wish.png"
   }
 ]

@@ -226,11 +226,8 @@ button:hover {
 
 .song-card {
   width: 100%;
-  display: grid;
-  grid-template-columns: 54px minmax(0, 1fr);
-  gap: 12px;
-  align-items: center;
-  padding: 10px;
+  display: block;
+  padding: 16px 18px;
   border: 1px solid transparent;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.66);
@@ -243,29 +240,12 @@ button:hover {
   background: #fff;
 }
 
-.song-card img {
-  width: 54px;
-  height: 54px;
-  border-radius: 12px;
-  object-fit: cover;
-  background: #ead8c7;
-}
-
 .song-title {
   display: block;
   overflow: hidden;
   color: var(--text);
   font-weight: 750;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.song-artist {
-  display: block;
-  margin-top: 4px;
-  overflow: hidden;
-  color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 1rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -327,11 +307,6 @@ button:hover {
   }
 
   .song-card {
-    grid-template-columns: 68px minmax(0, 1fr);
-  }
-
-  .song-card img {
-    width: 68px;
-    height: 68px;
+    padding: 16px;
   }
 }
