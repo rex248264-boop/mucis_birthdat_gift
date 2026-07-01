@@ -212,20 +212,21 @@ button:hover {
     width: min(100% - 22px, 460px);
     grid-template-columns: 1fr;
     align-items: start;
-    gap: 18px;
+    gap: 16px;
     padding: 18px 0 28px;
   }
 
   .player-panel {
     border-radius: 20px;
     padding: 16px;
-    min-height: calc(100vh - 112px);
-    display: flex;
-    flex-direction: column;
+    height: clamp(640px, calc(100svh - 122px), 780px);
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto auto auto;
   }
 
   .cover-wrap {
-    aspect-ratio: 1 / 1.35;
+    height: 100%;
+    min-height: 0;
     border-radius: 18px;
   }
 
@@ -238,7 +239,7 @@ button:hover {
   }
 
   audio {
-    margin-top: auto;
+    margin-top: 0;
   }
 
   .controls-row {
@@ -246,7 +247,7 @@ button:hover {
   }
 
   .playlist-panel {
-    max-height: 220px;
+    max-height: 172px;
     border-radius: 18px;
     padding: 16px;
     overflow: hidden;
