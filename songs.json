@@ -1,15 +1,9 @@
 [
   {
-    "id": "example",
-    "title": "示例歌曲",
+    "id": "first-wish",
+    "title": "First Wish",
     "artist": "Tang",
-    "audio": "assets/music/example.mp3",
-    "cover": "assets/covers/example.jpg"
-  },
-  {
-    "id": "no-cover-example",
-    "title": "没有单独封面的示例",
-    "artist": "Tang",
-    "audio": "assets/music/no-cover-example.mp3"
+    "audio": "assets/music/First Wish.mp3",
+    "cover": "assets/covers/First Wish.png"
   }
 ]
