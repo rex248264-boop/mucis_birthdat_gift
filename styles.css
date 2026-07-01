@@ -212,17 +212,60 @@ button:hover {
     width: min(100% - 22px, 460px);
     grid-template-columns: 1fr;
     align-items: start;
+    gap: 18px;
     padding: 18px 0 28px;
   }
 
   .player-panel {
     border-radius: 20px;
     padding: 16px;
+    min-height: calc(100vh - 112px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cover-wrap {
+    aspect-ratio: 1 / 1.35;
+    border-radius: 18px;
+  }
+
+  .track-meta {
+    padding: 18px 4px 16px;
+  }
+
+  h1 {
+    font-size: clamp(2.45rem, 13vw, 3.45rem);
+  }
+
+  audio {
+    margin-top: auto;
+  }
+
+  .controls-row {
+    margin-top: 16px;
   }
 
   .playlist-panel {
-    max-height: none;
+    max-height: 220px;
     border-radius: 18px;
     padding: 16px;
+    overflow: hidden;
+  }
+
+  .playlist-heading {
+    padding-bottom: 14px;
+  }
+
+  .playlist-heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .song-card {
+    grid-template-columns: 68px minmax(0, 1fr);
+  }
+
+  .song-card img {
+    width: 68px;
+    height: 68px;
   }
 }
