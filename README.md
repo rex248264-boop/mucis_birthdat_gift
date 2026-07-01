@@ -58,7 +58,7 @@ https://rex248264-boop.github.io/mucis_birthdat_gift/?song=birthday
 如果只是想访问 MP3 文件本身，链接是：
 
 ```text
-https://rex248264-boop.github.io/mucis_birthdat_gift/assets/music/birthday.mp3
+https://rex248264-boop.github.io/mucis_birthdat_gift/assets/music/first-wish.mp3
 ```
 
 ## 开启 GitHub Pages
