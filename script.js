@@ -14,16 +14,28 @@ const songCount = document.querySelector("#songCount");
 const prevBtn = document.querySelector("#prevBtn");
 const nextBtn = document.querySelector("#nextBtn");
 
+function getSongIdFromAudioPath(audioPath, index) {
+  const fileName = audioPath.split("/").pop() || `song-${index + 1}`;
+  return fileName.replace(/\.[^.]+$/, "");
+}
+
+function getRequestedSongId() {
+  return new URLSearchParams(window.location.search).get("song");
+}
+
 function normalizeSong(song, index) {
+  const audioPath = song.audio || "";
+
   return {
+    id: song.id || getSongIdFromAudioPath(audioPath, index),
     title: song.title || `歌曲 ${index + 1}`,
     artist: song.artist || "未知歌手",
-    audio: song.audio || "",
+    audio: audioPath,
     cover: song.cover || DEFAULT_COVER,
   };
 }
 
-function setActiveSong(index, shouldPlay = false) {
+function setActiveSong(index, shouldPlay = false, shouldUpdateUrl = true) {
   if (!state.songs.length) return;
 
   state.currentIndex = (index + state.songs.length) % state.songs.length;
@@ -39,9 +51,23 @@ function setActiveSong(index, shouldPlay = false) {
     button.classList.toggle("is-active", buttonIndex === state.currentIndex);
   });
 
+  if (shouldUpdateUrl) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("song", song.id);
+    window.history.replaceState({}, "", url);
+  }
+
   if (shouldPlay) {
     audio.play().catch(() => {});
   }
+}
+
+function getInitialSongIndex() {
+  const requestedSongId = getRequestedSongId();
+  if (!requestedSongId) return 0;
+
+  const requestedIndex = state.songs.findIndex((song) => song.id === requestedSongId);
+  return requestedIndex >= 0 ? requestedIndex : 0;
 }
 
 function renderPlaylist() {
@@ -62,6 +88,7 @@ function renderPlaylist() {
     const button = document.createElement("button");
     button.className = "song-card";
     button.type = "button";
+    button.dataset.songId = song.id;
     button.addEventListener("click", () => setActiveSong(index, true));
 
     const image = document.createElement("img");
@@ -82,7 +109,7 @@ function renderPlaylist() {
     playlist.append(button);
   });
 
-  setActiveSong(0);
+  setActiveSong(getInitialSongIndex(), false, Boolean(getRequestedSongId()));
 }
 
 async function loadSongs() {
