@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Music Gift</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="player-panel" aria-label="音乐播放器">
+      <div class="cover-wrap">
+        <img id="cover" class="cover" src="assets/covers/default-cover.svg" alt="音乐封面">
+      </div>
+
+      <div class="track-meta">
+        <p class="eyebrow">Music Gift</p>
+        <h1 id="title">选择一首歌</h1>
+        <p id="artist">给 Tang 的音乐礼物</p>
+      </div>
+
+      <audio id="audio" controls preload="metadata"></audio>
+
+      <div class="controls-row" aria-label="切换歌曲">
+        <button id="prevBtn" type="button">上一首</button>
+        <button id="nextBtn" type="button">下一首</button>
+      </div>
+    </section>
+
+    <section class="playlist-panel" aria-label="播放列表">
+      <div class="playlist-heading">
+        <h2>播放列表</h2>
+        <p id="songCount">正在读取歌曲...</p>
+      </div>
+      <div id="playlist" class="playlist"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+[
+  {
+    "title": "示例歌曲",
+    "artist": "Tang",
+    "audio": "assets/music/example.mp3",
+    "cover": "assets/covers/example.jpg"
+  },
+  {
+    "title": "没有单独封面的示例",
+    "artist": "Tang",
+    "audio": "assets/music/no-cover-example.mp3"
+  }
+]
