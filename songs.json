@@ -5,5 +5,75 @@
     "artist": "一凯",
     "audio": "assets/music/first-wish.mp3",
     "cover": "assets/covers/first-wish.png"
+  },
+  {
+    "id": "wedding",
+    "title": "Wedding",
+    "artist": "一凯",
+    "audio": "assets/music/wedding.mp3",
+    "cover": "assets/covers/wedding.png"
+  },
+  {
+    "id": "night-run",
+    "title": "Night Run",
+    "artist": "一凯",
+    "audio": "assets/music/night-run.mp3",
+    "cover": "assets/covers/night-run.png"
+  },
+  {
+    "id": "answer",
+    "title": "Answer",
+    "artist": "一凯",
+    "audio": "assets/music/answer.mp3",
+    "cover": "assets/covers/answer.png"
+  },
+  {
+    "id": "moonlit-old-dream",
+    "title": "Moonlit Old Dream",
+    "artist": "一凯",
+    "audio": "assets/music/moonlit-old-dream.mp3",
+    "cover": "assets/covers/moonlit-old-dream.png"
+  },
+  {
+    "id": "intimacy",
+    "title": "Intimacy",
+    "artist": "一凯",
+    "audio": "assets/music/intimacy.mp3",
+    "cover": "assets/covers/intimacy.png"
+  },
+  {
+    "id": "moon-car",
+    "title": "Moon Car",
+    "artist": "一凯",
+    "audio": "assets/music/moon-car.mp3",
+    "cover": "assets/covers/moon-car.png"
+  },
+  {
+    "id": "neon-rain",
+    "title": "Neon Rain",
+    "artist": "一凯",
+    "audio": "assets/music/neon-rain.mp3",
+    "cover": "assets/covers/neon-rain.png"
+  },
+  {
+    "id": "breath",
+    "title": "Breath",
+    "artist": "一凯",
+    "audio": "assets/music/breath.mp3",
+    "cover": "assets/covers/breath.png"
+  },
+  {
+    "id": "xiang-jian-ni",
+    "title": "想见你",
+    "artist": "一凯",
+    "audio": "assets/music/xiang-jian-ni.mp3",
+    "cover": "assets/covers/xiang-jian-ni.png"
+  },
+  {
+    "id": "closest-to-each-other",
+    "title": "没有人能够比我们更接近对方",
+    "artist": "一凯",
+    "audio": "assets/music/closest-to-each-other.mp3",
+    "cover": "assets/covers/closest-to-each-other.png"
   }
 ]
