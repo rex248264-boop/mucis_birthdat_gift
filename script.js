@@ -109,7 +109,7 @@ function renderPlaylist() {
     playlist.append(button);
   });
 
-  setActiveSong(getInitialSongIndex(), false, Boolean(getRequestedSongId()));
+  setActiveSong(getInitialSongIndex(), true, Boolean(getRequestedSongId()));
 }
 
 async function loadSongs() {
