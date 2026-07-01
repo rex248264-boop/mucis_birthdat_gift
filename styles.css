@@ -225,7 +225,9 @@ button:hover {
   }
 
   .cover-wrap {
-    aspect-ratio: 1 / 1.35;
+    height: 58vh;
+    min-height: 470px;
+    max-height: 640px;
     border-radius: 18px;
   }
 
