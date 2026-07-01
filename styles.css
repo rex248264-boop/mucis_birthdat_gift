@@ -219,14 +219,13 @@ button:hover {
   .player-panel {
     border-radius: 20px;
     padding: 16px;
-    height: clamp(640px, calc(100svh - 122px), 780px);
-    display: grid;
-    grid-template-rows: minmax(0, 1fr) auto auto auto;
+    min-height: 0;
+    display: block;
   }
 
   .cover-wrap {
-    height: 100%;
-    min-height: 0;
+    height: 660px;
+    aspect-ratio: auto;
     border-radius: 18px;
   }
 
